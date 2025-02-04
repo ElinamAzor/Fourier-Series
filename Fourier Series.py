@@ -1,8 +1,8 @@
-import numpy as np 
-import matplotlib.pyplot as plt
+import numpy as np #type: ignore an import file for mathematical operations
+import matplotlib.pyplot as plt #type: ignore an import file for ploting graphs
 
 # Define the square wave parameters
-T = 2 * np.pi  # period - given by the 2 on the angular frequency
+T = 2 * np.pi  # period of a full cycle wave
 A = 1          # amplitude
 omega = 2 * np.pi / T  # fundamental angular frequency
 
@@ -29,7 +29,7 @@ def square_wave_fourier(t, N):
     return f
 
 # Choose the number of harmonics for approximation
-harmonics = [1, 3, 5, 10, 50]  # different approximations
+harmonics = [1, 3, 5, 10, 50,105,201]  # different approximations
 
 plt.figure(figsize=(10, 8))
 
