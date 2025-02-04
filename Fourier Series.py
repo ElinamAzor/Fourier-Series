@@ -1,8 +1,8 @@
-import numpy as np
+import numpy as np 
 import matplotlib.pyplot as plt
 
 # Define the square wave parameters
-T = 2 * np.pi  # period
+T = 2 * np.pi  # period - given by the 2 on the angular frequency
 A = 1          # amplitude
 omega = 2 * np.pi / T  # fundamental angular frequency
 
@@ -47,3 +47,20 @@ for i, N in enumerate(harmonics, start=1):
 
 plt.tight_layout()
 plt.show()
+
+# This function uses sine waves to approximate a square wave by adding up multiple waves (harmonics).
+# The more harmonics we use, the closer the result gets to a sharp square wave.
+# We add only the odd-numbered harmonics (1st, 3rd, 5th, etc.).
+# Each harmonic is smaller and helps sharpen the edges of the wave.
+# The final result is a combination of waves that looks like a square wave with smoother transitions.
+# 1. Defining Parameters:
+# - The period (T) is set to 2π, so the fundamental frequency is ω = 2π/T.
+# - The amplitude (A) is set to 1.
+
+# 2. Fourier Series Function:
+# The `square_wave_fourier` function approximates the square wave using a finite number of odd harmonics.
+# For each harmonic n, we add the term: (1 / (2n-1)) * sin((2n-1) * omega * t).
+
+# Elinam Erika Azorliade
+# McGovern Twumasi Owusu-Bekoe
+# Kevin Papa Kwesi Bekoe
